@@ -1,7 +1,8 @@
 package com.store.backend.routes.product;
 
+import com.store.backend.dto.ProductDTO;
 import com.store.backend.dto.ProviderDTO;
-import com.store.backend.usecases.product.GetProductUseCase;
+import com.store.backend.usecases.product.GetAllProductUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -16,10 +17,10 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GetProductRoute {
 
     @Bean
-    public RouterFunction<ServerResponse> getAllProducts(GetProductUseCase getAllProviderUseCase){
-        return route(GET("/v1/storeApi/getAllProviders"), request -> ServerResponse.ok()
+    public RouterFunction<ServerResponse> getAllProducts(GetAllProductUseCase getAllProductUseCase){
+        return route(GET("/v1/storeApi/getAllProducts"), request -> ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(BodyInserters.fromPublisher(getAllProviderUseCase.getAllProviders(), ProviderDTO.class)));
+                .body(BodyInserters.fromPublisher(getAllProductUseCase.getAllProducts(), ProductDTO.class)));
     }
 
 }
