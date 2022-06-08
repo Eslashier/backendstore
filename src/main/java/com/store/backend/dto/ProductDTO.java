@@ -11,7 +11,7 @@ public class ProductDTO {
     private String description;
     private Integer price;
     private Integer stock;
-    private Integer minimum;
-    private Integer maximum;
+    private Integer minimumStock;
+    private Integer maximumStock;
     private Provider provider;
 }

@@ -7,4 +7,6 @@ public class ProviderDTO {
 
     private String id;
     private String providerName;
+    private String phone;
+    private String email;
 }

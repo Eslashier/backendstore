@@ -10,7 +10,7 @@ import java.util.UUID;
 @Data
 public class BillDTO {
 
-    private String uuid = UUID.randomUUID().toString();
+    private String id;
     private String clientName;
     private String salesmanName;
     private List<Product> productListSale;
