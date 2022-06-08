@@ -13,5 +13,5 @@ public class Receipt {
     private String id;
     private String providerName;
     private LocalDate date;
-    private Provider providerid;
+    private Provider provider;
 }
