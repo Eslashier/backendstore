@@ -11,8 +11,7 @@ import java.util.UUID;
 @Document(collection = "bill")
 public class Bill {
     @Id
-    private String id;
-    private String uid = UUID.randomUUID().toString();
+    private String uid;
     private String clientName;
     private String salesmanName;
     private List<Product> productListSale;
