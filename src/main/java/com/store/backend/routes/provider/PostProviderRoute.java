@@ -18,7 +18,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class PostProviderRoute {
     @Bean
     public RouterFunction<ServerResponse> createProvider(PostProviderUseCase postProviderUseCase){
-     return route(POST("/v1/storeApi/createprovider").and(accept(MediaType.APPLICATION_JSON)),
+     return route(POST("/v1/storeApi/createProvider").and(accept(MediaType.APPLICATION_JSON)),
              request -> request.bodyToMono(ProviderDTO.class)
                      .flatMap(postProviderUseCase::postProvider)
                      .flatMap(providerDTO -> ServerResponse.status(HttpStatus.CREATED)
