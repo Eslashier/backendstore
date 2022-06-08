@@ -12,4 +12,5 @@ public class Provider {
     private String providerName;
     private String phone;
     private String email;
+    private String passport;
 }

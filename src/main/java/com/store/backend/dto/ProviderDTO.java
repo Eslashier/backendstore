@@ -9,4 +9,5 @@ public class ProviderDTO {
     private String providerName;
     private String phone;
     private String email;
+    private String passport;
 }

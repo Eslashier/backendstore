@@ -2,7 +2,6 @@ package com.store.backend.mapper;
 
 import com.store.backend.collection.Product;
 import com.store.backend.collection.Provider;
-import com.store.backend.dto.ProductDTO;
 import com.store.backend.dto.ProviderDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
@@ -22,8 +21,8 @@ public class ProviderMapper {
         return modelMapper.map(provider, ProviderDTO.class);
     }
 
-    public Product fromProviderDTOToProvider(ProviderDTO providerDTO){
-        return modelMapper.map(providerDTO, Product.class);
+    public Provider fromProviderDTOToProvider(ProviderDTO providerDTO){
+        return modelMapper.map(providerDTO, Provider.class);
     }
 
 }
