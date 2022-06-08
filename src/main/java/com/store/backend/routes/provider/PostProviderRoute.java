@@ -1,6 +1,5 @@
 package com.store.backend.routes.provider;
 
-import com.store.backend.collection.Provider;
 import com.store.backend.dto.ProviderDTO;
 import com.store.backend.usecases.provider.PostProviderUseCase;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class PostProviderRoute {
     @Bean
     public RouterFunction<ServerResponse> createProvider(PostProviderUseCase postProviderUseCase){
-     return route(POST("/v1/api/createprovider").and(accept(MediaType.APPLICATION_JSON)),
+     return route(POST("/v1/storeApi/createprovider").and(accept(MediaType.APPLICATION_JSON)),
              request -> request.bodyToMono(ProviderDTO.class)
                      .flatMap(postProviderUseCase::postProvider)
                      .flatMap(providerDTO -> ServerResponse.status(HttpStatus.CREATED)
