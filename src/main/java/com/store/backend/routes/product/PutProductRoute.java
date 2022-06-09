@@ -19,7 +19,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class PutProductRoute {
     @Bean
     public RouterFunction<ServerResponse> updateProduct(PutProductUseCase putProductUseCase){
-        return route(PUT("/v1/storeApi/createProduct").and(accept(MediaType.APPLICATION_JSON)),
+        return route(PUT("/v1/storeApi/updateProduct").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(ProductDTO.class)
                         .flatMap(putProductUseCase::putProduct)
                         .flatMap(productDTO -> ServerResponse.status(HttpStatus.ACCEPTED)
