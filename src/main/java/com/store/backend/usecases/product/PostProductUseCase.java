@@ -1,7 +1,6 @@
 package com.store.backend.usecases.product;
 
 import com.store.backend.dto.ProductDTO;
-import com.store.backend.dto.ProviderDTO;
 import com.store.backend.mapper.ProductMapper;
 import com.store.backend.repository.IProductRepository;
 import lombok.AllArgsConstructor;
