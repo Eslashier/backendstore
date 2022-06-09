@@ -2,10 +2,8 @@ package com.store.backend.dto;
 
 import com.store.backend.collection.Product;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
-import java.util.UUID;
 
 @Data
 public class BillDTO {

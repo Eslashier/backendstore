@@ -14,6 +14,6 @@ public class Receipt {
     private String providerName;
     private Double units;
     private String productId;
-    private LocalDate date;
+    private String date;
     private Provider provider;
 }

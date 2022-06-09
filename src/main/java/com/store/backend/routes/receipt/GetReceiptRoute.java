@@ -17,7 +17,7 @@ public class GetReceiptRoute {
 
     @Bean
     public RouterFunction<ServerResponse> getAllReceipts(GetReceiptUseCase getReceiptUseCase){
-        return route(GET("/v1/storeApi/getAllBills"), request -> ServerResponse.ok()
+        return route(GET("/v1/storeApi/getAllReceipts"), request -> ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromPublisher(getReceiptUseCase.getAllReceipts(), ReceiptDTO.class)));
     }
