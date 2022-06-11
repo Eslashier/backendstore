@@ -13,6 +13,7 @@ public class Product {
     private String name;
     private String description;
     private Integer price;
+    private Integer sold;
     private Integer stock;
     private Integer minimumStock;
     private Integer maximumStock;
