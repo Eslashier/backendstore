@@ -1,5 +1,6 @@
 package com.store.backend.dto;
 
+import com.store.backend.collection.Product;
 import com.store.backend.collection.Provider;
 import lombok.Data;
 
@@ -8,7 +9,6 @@ public class ReceiptDTO {
 
     private String id;
     private String units;
-    private String productId;
+    private Product product;
     private String date;
-    private Provider provider;
 }
