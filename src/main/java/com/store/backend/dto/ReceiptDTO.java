@@ -7,8 +7,7 @@ import lombok.Data;
 public class ReceiptDTO {
 
     private String id;
-    private String providerName;
-    private Double units;
+    private String units;
     private String productId;
     private String date;
     private Provider provider;
