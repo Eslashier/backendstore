@@ -9,6 +9,7 @@ import java.util.List;
 public class BillDTO {
 
     private String id;
+    private String date;
     private String clientName;
     private String salesmanName;
     private List<Product> productListSale;
