@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Receipt {
     @Id
     private String id;
-    private String units;
+    private Integer units;
     private Product product;
     private String date;
 }
