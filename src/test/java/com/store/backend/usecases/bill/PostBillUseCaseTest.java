@@ -1,12 +1,9 @@
 package com.store.backend.usecases.bill;
 
-import com.store.backend.collection.Bill;
 import com.store.backend.collection.Product;
 import com.store.backend.collection.Provider;
 import com.store.backend.dto.BillDTO;
 import com.store.backend.repository.IBillRepository;
-import com.store.backend.repository.IProductRepository;
-import com.store.backend.usecases.product.PostProductUseCase;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -17,8 +14,6 @@ import reactor.test.StepVerifier;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class PostBillUseCaseTest {

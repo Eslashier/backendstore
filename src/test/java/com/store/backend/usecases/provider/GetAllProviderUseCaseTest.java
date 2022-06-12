@@ -13,8 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class GetAllProviderUseCaseTest {
 
