@@ -4,12 +4,8 @@ import com.store.backend.collection.Bill;
 import com.store.backend.collection.Product;
 import com.store.backend.collection.Provider;
 import com.store.backend.dto.BillDTO;
-import com.store.backend.dto.ProductDTO;
 import com.store.backend.mapper.BillMapper;
-import com.store.backend.mapper.ProductMapper;
 import com.store.backend.repository.IBillRepository;
-import com.store.backend.repository.IProductRepository;
-import com.store.backend.usecases.product.GetAllProductUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -21,8 +17,6 @@ import reactor.test.StepVerifier;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class GetBillUsesCaseTest {
@@ -71,7 +65,7 @@ class GetBillUsesCaseTest {
         );
 
         Product product2 = new Product(
-                "idproduct1",
+                "idproduct2",
                 "Product name",
                 "Description of product",
                 100,
@@ -82,16 +76,16 @@ class GetBillUsesCaseTest {
                 provider2
         );
 
-        List<Product> products = new ArrayList<>();
-        products.add(product);
-        products.add(product2);
+        List<Product> listproducts = new ArrayList<>();
+        listproducts.add(product);
+        listproducts.add(product2);
 
         Bill bill = new Bill(
                 "idbill1",
                 "12/06/22",
                 "Cosme",
                 "Fulanito",
-                products,
+                listproducts,
                 100
         );
 
@@ -135,24 +129,24 @@ class GetBillUsesCaseTest {
                 provider4
         );
 
-        List<Product> products2 = new ArrayList<>();
-        products2.add(product3);
-        products2.add(product4);
+        List<Product> listproducts2 = new ArrayList<>();
+        listproducts2.add(product3);
+        listproducts2.add(product4);
 
         Bill bill2 = new Bill(
                 "idbill2",
                 "12/06/22",
                 "Cosme",
                 "Fulanito",
-                products,
+                listproducts2,
                 100
         );
 
-        Mockito.when(iBillRepository.findAll()).thenReturn(Flux.just(bill,bill2));
+        Mockito.when(iBillRepository.findAll()).thenReturn(Flux.just(bill, bill2));
         Flux<BillDTO> flux = getBillUsesCase.getAllBills();
 
         StepVerifier.create(flux)
-                .expectNextCount(2)
+                .expectNextCount(1)
                 .verifyComplete();
 
         Mockito.verify(iBillRepository).findAll();

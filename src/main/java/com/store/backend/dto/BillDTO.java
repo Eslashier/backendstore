@@ -17,4 +17,7 @@ public class BillDTO {
     private List<Product> productListSale;
     private Integer totalSale;
 
+    public BillDTO() {
+
+    }
 }
