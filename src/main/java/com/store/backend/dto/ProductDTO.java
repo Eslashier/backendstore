@@ -1,9 +1,11 @@
 package com.store.backend.dto;
 
 import com.store.backend.collection.Provider;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class ProductDTO {
 
     private String id;
@@ -16,4 +18,7 @@ public class ProductDTO {
     private Integer maximumStock;
     private Provider provider;
 
+    public ProductDTO() {
+
+    }
 }
