@@ -1,8 +1,10 @@
 package com.store.backend.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class ProviderDTO {
 
     private String id;
@@ -10,4 +12,8 @@ public class ProviderDTO {
     private String phone;
     private String email;
     private String passport;
+
+    public ProviderDTO() {
+
+    }
 }

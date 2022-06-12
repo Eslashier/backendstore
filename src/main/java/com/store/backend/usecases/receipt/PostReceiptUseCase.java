@@ -1,6 +1,5 @@
 package com.store.backend.usecases.receipt;
 
-import com.store.backend.dto.BillDTO;
 import com.store.backend.dto.ReceiptDTO;
 import com.store.backend.mapper.ReceiptMapper;
 import com.store.backend.repository.IReceiptRepository;
